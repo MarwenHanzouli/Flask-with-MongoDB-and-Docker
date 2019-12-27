@@ -2,15 +2,7 @@ from pos_microservice import app, bcrypt
 from flask import request, jsonify, Blueprint
 from flask_marshmallow import Marshmallow
 from pos_microservice.pointOfSale.models import PointOfSale
-from datetime import datetime
-from key import key
-import re
 
-import requests
-from ..decorators import require_appkey
-
-search_url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
-details_url = "https://maps.googleapis.com/maps/api/place/details/json"
 
 # Init bluebripnt
 pos = Blueprint('pos', __name__)
